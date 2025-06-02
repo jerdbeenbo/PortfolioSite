@@ -1,7 +1,6 @@
 # Blazor specific
 bin/
 obj/
-out/
 
 # Visual Studio / VS Code
 .vs/

@@ -1,0 +1,10 @@
+{
+  "buildCommand": "chmod +x build.sh && ./build.sh",
+  "outputDirectory": "out/wwwroot",
+  "routes": [
+    {
+      "src": "/[^.]*",
+      "dest": "/index.html"
+    }
+  ]
+}

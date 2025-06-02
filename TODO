@@ -1,2 +1,12 @@
 Wakatime API implementation routed through proxy
 Github integration through proxy
+
+
+When serving to vercel
+# Build WASM
+cd wwwroot/rust-boids
+wasm-pack build --target web --out-dir pkg
+
+# Go back and build Blazor
+cd ../..
+dotnet publish PortfolioSite.csproj -c Release -o out
