@@ -1,11 +1,4 @@
 {
-  "buildCommand": "dotnet publish -c Release -o out",
-  "outputDirectory": "out/wwwroot",
-  "installCommand": "curl -sSf https://dot.net/v1/dotnet-install.sh | bash /dev/stdin --version 8.0.100 && export PATH=\"$HOME/.dotnet:$PATH\"",
-  "routes": [
-    {
-      "src": "/[^.]*",
-      "dest": "/index.html"
-    }
-  ]
+  "buildCommand": "curl -sSf https://dot.net/v1/dotnet-install.sh | bash && export PATH=\"$HOME/.dotnet:$PATH\" && dotnet --version && dotnet publish PortfolioSite.csproj -c Release -o out",
+  "outputDirectory": "out/wwwroot"
 }
