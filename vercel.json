@@ -1,0 +1,11 @@
+{
+  "buildCommand": "dotnet publish -c Release -o out",
+  "outputDirectory": "out/wwwroot",
+  "installCommand": "curl -sSf https://dot.net/v1/dotnet-install.sh | bash /dev/stdin --version 8.0.100 && export PATH=\"$HOME/.dotnet:$PATH\"",
+  "routes": [
+    {
+      "src": "/[^.]*",
+      "dest": "/index.html"
+    }
+  ]
+}
