@@ -1,4 +1,10 @@
 {
-  "buildCommand": "curl -sSf https://dot.net/v1/dotnet-install.sh | bash && export PATH=\"$HOME/.dotnet:$PATH\" && dotnet --version && dotnet publish PortfolioSite.csproj -c Release -o out",
-  "outputDirectory": "out/wwwroot"
+  "buildCommand": "chmod +x build.sh && ./build.sh",
+  "outputDirectory": "out/wwwroot",
+  "routes": [
+    {
+      "src": "/[^.]*",
+      "dest": "/index.html"
+    }
+  ]
 }
