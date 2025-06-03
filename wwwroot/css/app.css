@@ -10,6 +10,16 @@
     color: red;
 }
 
+h1, h2, h3, p {
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Specifically for iOS Safari */
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
 #blazor-error-ui {
     color-scheme: light only;
     background: lightyellow;
