@@ -1,4 +1,4 @@
-import init, { Flock } from '../rust-boids/pkg/rust_boids.js';
+import init, { Flock } from '/rust-boids/pkg/rust_boids.js';
 
 let flock;
 let canvas;
