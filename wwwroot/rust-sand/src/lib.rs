@@ -57,8 +57,8 @@ impl ParticleGrid {
     ///Creates a new grid with specified cols, rows and cell size
     fn new_grid(cell_size: usize) -> Self {
 
-        let width = 1200;
-        let height = 800;
+        let width = 300;
+        let height = 500;
 
 
         let _cell_size: usize = 4;

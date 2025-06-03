@@ -1,5 +1,5 @@
 [package]
-name = "wasm-falling-sand"
+name = "rust-sand"
 version = "0.1.0"
 authors = ["Jarred Jenkins <https://github.com/jerdbeenbo>"]
 description = "A falling sand particle SA simulation"
