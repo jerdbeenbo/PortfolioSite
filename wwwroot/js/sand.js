@@ -3,13 +3,13 @@ import init, {
   wasm_bridge_init,
   wasm_bridge_update,
   add_sand,
-} from "../rust-sand/pkg/wasm_falling_sand.js";
+} from "../rust-sand/pkg/rust_sand.js";
 
 let canvas, ctx;
 const cellSize = 4;
 
 let lastSimulationTime = 0;
-const simulationInterval = 1000 / 15; // Run simulation 15 times per second (main priority boids)
+const simulationInterval = 1000 / 45; // Run simulation 30 times per second (main priority boids)
 function animate(currentTime) {
   // Only run simulation if enough time has passed
   if (currentTime - lastSimulationTime >= simulationInterval) {
@@ -41,29 +41,45 @@ function animate(currentTime) {
   requestAnimationFrame(animate);
 }
 
-async function draw() {
-  // Initialize everything from wasm before committing to the draw
-  await init();
-
-  wasm_bridge_init();
-  canvas = document.getElementById("canvas");
-  if (canvas.getContext) {
-    //create an object with tooling for drawing on the canvas
-    ctx = canvas.getContext("2d");
-
-    canvas.width = 300;
-    canvas.height = 500;
-
-    setupMouseInput();
-
-    //begin the animation
-    animate();
+window.initSand = async (canvasElement) => {
+  
+  try {
+    await init();
+    
+    wasm_bridge_init();
+    
+    canvas = canvasElement;
+    
+    if (canvas) {
+      console.log("Canvas found:", canvas);
+      ctx = canvas.getContext("2d");
+      
+      canvas.width = 300;
+      canvas.height = 500;
+      
+      setupMouseInput();
+      
+      animate();
+    } else {
+      console.error("Canvas not found!");
+    }
+  } catch (error) {
+    console.error("Error initializing sand simulation:", error);
   }
 }
 
 function setupMouseInput() {
-  canvas.addEventListener("mousedown", handleMouse);
-  canvas.addEventListener("mousemove", handleMouseMove);
+  canvas.addEventListener("mousedown", (event) => {
+    console.log("Mouse down detected!");
+    handleMouse(event);
+  });
+  
+  canvas.addEventListener("mousemove", (event) => {
+    if (isMouseDown) {
+      console.log("Mouse drag detected!");
+      handleMouseMove(event);
+    }
+  });
 }
 
 let isMouseDown = false;
@@ -85,18 +101,19 @@ document.addEventListener("mouseup", () => {
 });
 
 function addSandAtMouse(event) {
-  // Get mouse position relative to canvas
   const rect = canvas.getBoundingClientRect();
   const mouseX = event.clientX - rect.left;
   const mouseY = event.clientY - rect.top;
-
-  // Convert pixel coordinates to grid coordinates
+  
   const col = Math.floor(mouseX / cellSize);
   const row = Math.floor(mouseY / cellSize);
-
-  // Call your Rust function to add sand
-  add_sand(row, col);
+  
+  console.log(`Mouse click at: (${mouseX}, ${mouseY}) -> Grid: (${row}, ${col})`);
+  
+  try {
+    const result = add_sand(row, col);
+    console.log("Sand added successfully:", result);
+  } catch (error) {
+    console.error("Error adding sand:", error);
+  }
 }
-
-//Listen for go-ahead signal from browser to start the simulation
-window.addEventListener("load", draw);

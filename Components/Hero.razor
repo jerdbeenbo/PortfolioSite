@@ -1,47 +1,42 @@
 @inject IJSRuntime JS
 
-<canvas @ref="boidsCanvas" 
-        class="fixed top-0 left-0 w-full h-full pointer-events-none"
-        style="z-index: 1;"></canvas>
+<canvas @ref="boidsCanvas" class="fixed top-0 left-0 w-full h-full pointer-events-none"></canvas>
 
-<!-- Your portfolio content -->
-<div class="relative z-10 h-screen flex items-center justify-center">
-    <div class="flex items-center justify-center gap-12">
-        <!-- Left side - Your info -->
-        <div class="text-center">
-            <h1 class="text-6xl font-bold text-white mb-4 drop-shadow-lg">
+<div class="relative z-10 min-h-screen flex items-center justify-center py-20">
+    <div class="flex items-center justify-center">
+        <div class="text-center gap-12">
+            <h1 class="text-6xl font-bold text-white mb-4 drop-shadow-lg gap-12">
                 Jarred Jenkins
             </h1>
             <p class="text-xl text-white/90 mb-8 drop-shadow">
                 Graduate Developer
             </p>
-            <button class="bg-white/10 backdrop-blur-sm border border-white/20 text-white px-8 py-3 rounded-lg hover:bg-white/20 transition-all">
+            <button
+                class="bg-white/10 backdrop-blur-sm border border-white/20 text-white px-8 py-3 rounded-lg hover:bg-white/20 transition-all">
                 View My Work
             </button>
         </div>
-        
-        <!-- Right side - Sand simulation -->
-        <div class="hidden md:block">
-            <canvas id="canvas" 
-                    class="border-2 border-white/20 rounded-lg bg-black/20 backdrop-blur-sm"
-                    style="width: 300px; height: 500px;">
+
+        <div class="hidden md:block ml-8">
+            <canvas @ref="sandCanvas" 
+            class="rounded-lg border-2 border-red-900" 
+            style="width: 300px; height: 500px;">
             </canvas>
-            <p class="text-white/70 text-sm mt-2 text-center">Click and drag to add sand</p>
+            <p class="text-sm mt-2 text-center text-white">Click and drag to add sand</p>
         </div>
     </div>
 </div>
 
 @code {
     private ElementReference boidsCanvas;
-    
+    private ElementReference sandCanvas;
+
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (firstRender)
         {
-            // Iniitalise boid simulation
             await JS.InvokeVoidAsync("initBoids", boidsCanvas);
-            // Initialise sand simulation too
-            await JS.InvokeVoidAsync("eval", "import('/js/sand.js')");
+            await JS.InvokeVoidAsync("initSand", sandCanvas);
         }
     }
 }
