@@ -3,7 +3,7 @@ import init, {
   wasm_bridge_init,
   wasm_bridge_update,
   add_sand,
-} from "../rust-sand/pkg/rust_sand.js";
+} from "/rust-sand/pkg/rust_sand.js";
 
 let canvas, ctx;
 const cellSize = 4;
