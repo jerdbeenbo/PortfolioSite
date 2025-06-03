@@ -21,14 +21,15 @@ struct Boid {
     max_force: f32, //Alignment / Cohesion / Separation
     width: f32,     // Store bounds in each boid
     height: f32,
+    smoothed_acceleration: Vec2,
 }
 
 impl Boid {
     fn spawn(width: f32, height: f32) -> Self {  // Add parameters here
         Boid {
             position: Vec2::new(
-                fastrand::f32() * width,  // Use parameters
-                fastrand::f32() * height, // Use parameters
+                fastrand::f32() * width * 8.0,  
+                fastrand::f32() * height * 8.0, 
             ),
             velocity: Vec2::new(
                 (fastrand::f32() - 0.5) * 4.0, // Random velocity: -2.0 to 2.0
@@ -39,6 +40,7 @@ impl Boid {
             max_force: MAX_FORCE,
             width,     // Use parameters
             height,    // Use parameters
+            smoothed_acceleration: Vec2::ZERO,
         }
     }
 
@@ -68,9 +70,14 @@ impl Boid {
 
     fn update_with_delta(&mut self, delta_time: f32) {
         // Scale movement by delta time (60fps = ~0.0167 delta)
-        let time_scale = delta_time * 60.0; // Normalize to 60fps equivalent
+        let time_scale = delta_time * 60.0; // Normalise to 60fps equivalent
 
-        self.velocity += self.acceleration * time_scale;
+        // Smooth the acceleration over time
+        let smoothing_factor = 0.7; //(0.0 = no smoothing, 1.0 = maximum smoothing)
+        self.smoothed_acceleration = self.smoothed_acceleration.lerp(self.acceleration, 1.0 - smoothing_factor);
+        
+        // Use smoothed acceleration
+        self.velocity += self.smoothed_acceleration * time_scale;
         self.velocity = self.velocity.clamp_length_max(self.max_speed);
         self.position += self.velocity * time_scale;
 
@@ -281,6 +288,7 @@ pub struct Flock {  // Make this public
     height: f32,      // Dynamic height
 }
 
+
 #[wasm_bindgen]
 impl Flock {
     #[wasm_bindgen(constructor)]
@@ -299,6 +307,17 @@ impl Flock {
             width,
             height,
         }
+    }
+
+    #[wasm_bindgen]
+    pub fn get_velocities(&mut self) -> Vec<f32> {
+        let mut _vec = Vec::new();
+
+        for boid in &self.boids {
+            _vec.push(boid.velocity.x);  //one boid with be position n and n + 1
+            _vec.push(boid.velocity.y);
+        }
+        _vec
     }
 
     #[wasm_bindgen]
@@ -349,10 +368,10 @@ impl Flock {
             let cohesion = boid.cohere(&neighbors);
             let unblock = boid.view_unblocking(&neighbors);
 
-            boid.apply_force(separation * 2.0);
-            boid.apply_force(alignment * 1.5);
-            boid.apply_force(cohesion * 1.8);
-            boid.apply_force(unblock * 0.4);
+            boid.apply_force(separation * 1.2);
+            boid.apply_force(alignment * 0.9);
+            boid.apply_force(cohesion * 0.9);
+            boid.apply_force(unblock * 0.3);
             boid.update_with_delta(delta_time);
         }
     }

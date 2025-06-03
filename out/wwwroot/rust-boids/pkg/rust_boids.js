@@ -63,6 +63,15 @@ export class Flock {
         return this;
     }
     /**
+     * @returns {Float32Array}
+     */
+    get_velocities() {
+        const ret = wasm.flock_get_velocities(this.__wbg_ptr);
+        var v1 = getArrayF32FromWasm0(ret[0], ret[1]).slice();
+        wasm.__wbindgen_free(ret[0], ret[1] * 4, 4);
+        return v1;
+    }
+    /**
      * @param {number} delta_time
      */
     update_with_delta(delta_time) {

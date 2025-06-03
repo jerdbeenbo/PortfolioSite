@@ -6,6 +6,7 @@
 export class Flock {
   free(): void;
   constructor(amt: number, width: number, height: number);
+  get_velocities(): Float32Array;
   update_with_delta(delta_time: number): void;
   get_positions(): Float32Array;
   resize(new_width: number, new_height: number): void;
@@ -17,6 +18,7 @@ export interface InitOutput {
   readonly memory: WebAssembly.Memory;
   readonly __wbg_flock_free: (a: number, b: number) => void;
   readonly flock_new: (a: number, b: number, c: number) => number;
+  readonly flock_get_velocities: (a: number) => [number, number];
   readonly flock_update_with_delta: (a: number, b: number) => void;
   readonly flock_get_positions: (a: number) => [number, number];
   readonly flock_resize: (a: number, b: number, c: number) => void;
