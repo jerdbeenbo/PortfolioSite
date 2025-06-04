@@ -1,0 +1,14 @@
+@inject IJSRuntime JS
+
+<canvas @ref="boidsCanvas" class="fixed top-0 left-0 w-full h-full pointer-events-none"></canvas>
+@code {
+    private ElementReference boidsCanvas;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JS.InvokeVoidAsync("initBoids", boidsCanvas);
+        }
+    }
+}

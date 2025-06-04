@@ -1,5 +1,41 @@
 @page "/work"
 
+@inject IJSRuntime JS
+
 @using PortfolioSite.Components
 
+<div class="boids-background"></div> <!-- For gradient background -->
+
+<BoidBg />
 <NavBar />
+
+<h1 class="fixed text-3xl font-bold mb-8 gap-12">My Work</h1>
+
+<div class="flex items-center justify-center py-20">
+    <div class="min-h-screen flex items-center justify-center gap-12">
+        <img src="/anims/elevator.svg" alt="Elevator Animation" class="max-w-full h-auto" />
+    </div>
+
+    <div>
+        <!-- Canvas with game of life ? -->
+        <canvas @ref="gameOfLife" class="rounded-lg border-2 border-red-900" style="width: 300px; height: 500px;">
+        </canvas>
+        <p class="text-sm mt-2 text-center text-white">Click and drag to add particles</p>
+    </div>
+
+    <div>
+        <p>Cpr CoPilot</p>
+    </div>
+</div>
+
+@code {
+    private ElementReference gameOfLife;
+
+        protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JS.InvokeVoidAsync("initgol", gameOfLife);
+        }
+    }
+}
