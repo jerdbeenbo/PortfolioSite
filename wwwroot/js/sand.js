@@ -5,6 +5,8 @@ import init, {
   add_sand,
 } from "/rust-sand/pkg/rust_sand.js";
 
+let homeCanvasAnimation = null;
+
 let canvas, ctx;
 const cellSize = 4;
 
@@ -42,23 +44,25 @@ function animate(currentTime) {
 }
 
 window.initSand = async (canvasElement) => {
-  
+
   try {
     await init();
-    
+
     wasm_bridge_init();
-    
+
     canvas = canvasElement;
-    
+
     if (canvas) {
       console.log("Canvas found:", canvas);
       ctx = canvas.getContext("2d");
-      
+
       canvas.width = 300;
       canvas.height = 500;
-      
+
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
       setupMouseInput();
-      
+
       animate();
     } else {
       console.error("Canvas not found!");
@@ -66,14 +70,14 @@ window.initSand = async (canvasElement) => {
   } catch (error) {
     console.error("Error initializing sand simulation:", error);
   }
-}
+};
 
 function setupMouseInput() {
   canvas.addEventListener("mousedown", (event) => {
     console.log("Mouse down detected!");
     handleMouse(event);
   });
-  
+
   canvas.addEventListener("mousemove", (event) => {
     if (isMouseDown) {
       console.log("Mouse drag detected!");
@@ -104,12 +108,14 @@ function addSandAtMouse(event) {
   const rect = canvas.getBoundingClientRect();
   const mouseX = event.clientX - rect.left;
   const mouseY = event.clientY - rect.top;
-  
+
   const col = Math.floor(mouseX / cellSize);
   const row = Math.floor(mouseY / cellSize);
-  
-  console.log(`Mouse click at: (${mouseX}, ${mouseY}) -> Grid: (${row}, ${col})`);
-  
+
+  console.log(
+    `Mouse click at: (${mouseX}, ${mouseY}) -> Grid: (${row}, ${col})`
+  );
+
   try {
     const result = add_sand(row, col);
     console.log("Sand added successfully:", result);

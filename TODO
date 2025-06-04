@@ -1,6 +1,7 @@
 Wakatime API implementation routed through proxy
 Github integration through proxy
-Change BOID spawn position
+Formspree through proxy
+Also include github links
 
 
 When serving to vercel
