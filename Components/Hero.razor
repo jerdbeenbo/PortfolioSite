@@ -5,6 +5,7 @@
 
 <div class="relative z-10 min-h-screen flex items-center justify-center">
     <div class="flex items-center justify-center">
+
         <div class="text-center gap-12">
             <h1 class="text-6xl font-bold text-white mb-4 drop-shadow-lg gap-12">
                 Jarred Jenkins
@@ -25,11 +26,13 @@
             <p class="mt-12 text-white/50 italic text-xs">*boids simulation running from Rust -> WebAssembly, adapted from The Nature of Code (p5.js)</p>
         </div>
 
+        <img src="img/techstack.png" class="w-1/12 h-1/12"/>
+
         <div class="hidden md:block ml-8">
             <canvas @ref="sandCanvas" id="sandCanvas" class="rounded-lg border-2 border-red-900"
                 style="width: 300px; height: 500px;">
             </canvas>
-            <p class="text-sm mt-2 text-center text-white">Click and drag to add sand</p>
+            <p class="text-sm mt-2 text-center text-yellow-300">Click and drag to add sand</p>
             <p class="text-xs mt-2 flex justify-center text-center text-white w-2xs">Rust Based Cellular Automata simulation, compiled to WebAssembly. JavaScript / HTML canvas</p>
         </div>
     </div>

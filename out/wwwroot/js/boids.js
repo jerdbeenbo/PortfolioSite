@@ -90,11 +90,11 @@ function animate(currentTime) {
     }
     lastTime = currentTime;
     
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    
     // Use actual delta time for smoother animation
     const deltaTime = frameInterval / 1000; // Convert to seconds
     flock.update_with_delta(deltaTime);
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
     
     const positions = flock.get_positions();
     const velocities = flock.get_velocities();

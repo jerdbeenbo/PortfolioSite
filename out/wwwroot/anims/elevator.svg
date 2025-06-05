@@ -1,30 +1,91 @@
-<svg version="1.1" width="448" height="576" xmlns="http://www.w3.org/2000/svg"><defs><g id="p"><circle r="12" cx="12" cy="12" /><rect x="0" y="24" width="24" height="24" /></g></defs><rect x="104" y="460" width="96" height="72" style="fill: none; stroke: black; stroke-width: 5;">
+<svg version="1.1" width="592" height="576" xmlns="http://www.w3.org/2000/svg"><defs><g id="p"><circle r="12" cx="12" cy="12" /><rect x="0" y="24" width="24" height="24" /></g></defs><rect x="104" y="460" width="96" height="72" style="fill: none; stroke: black; stroke-width: 5;">
   <set attributeName="y" to="460" begin="z.begin" />
-  <animate attributeName="y" values="460;12" begin="z.begin+5.94s" dur="1.00s" fill="freeze"/>
-  <animate attributeName="y" values="12;124" begin="z.begin+9.42s" dur="1.00s" fill="freeze"/>
+  <animate attributeName="y" values="460;12" begin="z.begin+4.38s" dur="1.50s" fill="freeze"/>
+  <animate attributeName="y" values="12;460" begin="z.begin+11.42s" dur="1.50s" fill="freeze"/>
+  <animate attributeName="y" values="460;124" begin="z.begin+18.45s" dur="1.50s" fill="freeze"/>
+  <animate attributeName="y" values="124;12" begin="z.begin+25.51s" dur="1.50s" fill="freeze"/>
+  <animate attributeName="y" values="12;124" begin="z.begin+32.55s" dur="1.50s" fill="freeze"/>
 </rect>
 <rect x="248" y="460" width="96" height="72" style="fill: none; stroke: black; stroke-width: 5;">
   <set attributeName="y" to="460" begin="z.begin" />
-  <animate attributeName="y" values="460;348" begin="z.begin+2.13s" dur="1.00s" fill="freeze"/>
-  <animate attributeName="y" values="348;12" begin="z.begin+5.61s" dur="1.00s" fill="freeze"/>
+  <animate attributeName="y" values="460;236" begin="z.begin+3.24s" dur="1.50s" fill="freeze"/>
+  <animate attributeName="y" values="236;460" begin="z.begin+9.98s" dur="1.50s" fill="freeze"/>
+  <animate attributeName="y" values="460;236" begin="z.begin+16.88s" dur="1.50s" fill="freeze"/>
+  <animate attributeName="y" values="236;124" begin="z.begin+24.08s" dur="1.50s" fill="freeze"/>
+  <animate attributeName="y" values="124;236" begin="z.begin+31.04s" dur="1.50s" fill="freeze"/>
 </rect>
-<use href="#p" fill="#02c" x="-24">
+<rect x="392" y="460" width="96" height="72" style="fill: none; stroke: black; stroke-width: 5;">
+  <set attributeName="y" to="460" begin="z.begin" />
+  <animate attributeName="y" values="460;236" begin="z.begin+3.77s" dur="1.50s" fill="freeze"/>
+  <animate attributeName="y" values="236;124" begin="z.begin+10.44s" dur="1.50s" fill="freeze"/>
+  <animate attributeName="y" values="124;460" begin="z.begin+17.04s" dur="1.50s" fill="freeze"/>
+  <animate attributeName="y" values="460;348" begin="z.begin+23.61s" dur="1.50s" fill="freeze"/>
+  <animate attributeName="y" values="348;236" begin="z.begin+30.13s" dur="1.50s" fill="freeze"/>
+  <animate attributeName="y" values="236;348" begin="z.begin+36.66s" dur="1.50s" fill="freeze"/>
+</rect>
+<use href="#p" fill="#093" x="-24">
   <set attributeName="y" to="36" begin="z.begin" />
-  <set attributeName="x" to="147" begin="z.begin+7.39s" />
-  <animate attributeName="y" values="36;148" begin="z.begin+9.42s" dur="1.00s" fill="freeze" />
-  <set attributeName="x" to="-24" begin="z.begin+11.93s" />
+  <set attributeName="x" to="147" begin="z.begin+8.21s" />
+  <animate attributeName="y" values="36;484" begin="z.begin+11.42s" dur="1.50s" fill="freeze" />
+  <set attributeName="x" to="-24" begin="z.begin+15.74s" />
 </use>
-<use href="#p" fill="#c80" x="-24">
-  <set attributeName="y" to="372" begin="z.begin" />
-  <set attributeName="x" to="272" begin="z.begin+3.59s" />
-  <animate attributeName="y" values="372;36" begin="z.begin+5.61s" dur="1.00s" fill="freeze" />
-  <set attributeName="x" to="-24" begin="z.begin+8.13s" />
+<use href="#p" fill="#750" x="-24">
+  <set attributeName="y" to="148" begin="z.begin" />
+  <set attributeName="x" to="128" begin="z.begin+22.31s" />
+  <animate attributeName="y" values="148;36" begin="z.begin+25.51s" dur="1.50s" fill="freeze" />
+  <set attributeName="x" to="-24" begin="z.begin+29.85s" />
+</use>
+<use href="#p" fill="#04b" x="-24">
+  <set attributeName="y" to="484" begin="z.begin" />
+  <set attributeName="x" to="301" begin="z.begin+13.39s" />
+  <animate attributeName="y" values="484;260" begin="z.begin+16.88s" dur="1.50s" fill="freeze" />
+  <set attributeName="x" to="-24" begin="z.begin+21.37s" />
+</use>
+<use href="#p" fill="#0ca" x="-24">
+  <set attributeName="y" to="484" begin="z.begin" />
+  <set attributeName="x" to="426" begin="z.begin+20.39s" />
+  <animate attributeName="y" values="484;372" begin="z.begin+23.61s" dur="1.50s" fill="freeze" />
+  <set attributeName="x" to="-24" begin="z.begin+27.43s" />
+</use>
+<use href="#p" fill="#0d0" x="-24">
+  <set attributeName="y" to="148" begin="z.begin" />
+  <set attributeName="x" to="119" begin="z.begin+22.31s" />
+  <animate attributeName="y" values="148;36" begin="z.begin+25.51s" dur="1.50s" fill="freeze" />
+  <set attributeName="x" to="-24" begin="z.begin+29.85s" />
+</use>
+<use href="#p" fill="#307" x="-24">
+  <set attributeName="y" to="148" begin="z.begin" />
+  <set attributeName="x" to="292" begin="z.begin+27.83s" />
+  <animate attributeName="y" values="148;260" begin="z.begin+31.04s" dur="1.50s" fill="freeze" />
+  <set attributeName="x" to="-24" begin="z.begin+34.64s" />
+</use>
+<use href="#p" fill="#208" x="-24">
+  <set attributeName="y" to="260" begin="z.begin" />
+  <set attributeName="x" to="417" begin="z.begin+33.45s" />
+  <animate attributeName="y" values="260;372" begin="z.begin+36.66s" dur="1.50s" fill="freeze" />
+  <set attributeName="x" to="-24" begin="z.begin+40.26s" />
+</use>
+<use href="#p" fill="#0b0" x="-24">
+  <set attributeName="y" to="260" begin="z.begin" />
+  <set attributeName="x" to="302" begin="z.begin+6.77s" />
+  <animate attributeName="y" values="260;484" begin="z.begin+9.98s" dur="1.50s" fill="freeze" />
+  <set attributeName="x" to="-24" begin="z.begin+13.89s" />
+</use>
+<use href="#p" fill="#580" x="-24">
+  <set attributeName="y" to="260" begin="z.begin" />
+  <set attributeName="x" to="427" begin="z.begin+7.23s" />
+  <animate attributeName="y" values="260;148" begin="z.begin+10.44s" dur="1.50s" fill="freeze" />
+  <set attributeName="x" to="-24" begin="z.begin+14.33s" />
 </use>
   <rect x="104" y="460" width="48" height="72" style="fill: #ccc; fill-opacity: 0.8; stroke: black">
     <set attributeName="x" to="104" begin="z.begin" />
+    <animate attributeName="x" begin="z.begin+12.92s" dur="2.32s" values="104;56" fill="freeze"/>
+    <animate attributeName="x" begin="z.begin+16.84s" dur="1.61s" values="56;104" fill="freeze"/>
   </rect>
   <rect x="152" y="460" width="48" height="72" style="fill: #ccc; fill-opacity: 0.8; stroke: black">
     <set attributeName="x" to="152" begin="z.begin" />
+    <animate attributeName="x" begin="z.begin+12.92s" dur="2.32s" values="152;200" fill="freeze"/>
+    <animate attributeName="x" begin="z.begin+16.84s" dur="1.61s" values="200;152" fill="freeze"/>
   </rect>
   <rect x="104" y="348" width="48" height="72" style="fill: #ccc; fill-opacity: 0.8; stroke: black">
     <set attributeName="x" to="104" begin="z.begin" />
@@ -40,101 +101,238 @@
   </rect>
   <rect x="104" y="124" width="48" height="72" style="fill: #ccc; fill-opacity: 0.8; stroke: black">
     <set attributeName="x" to="104" begin="z.begin" />
-    <animate attributeName="x" begin="z.begin+10.42s" dur="1.01s" values="104;56" fill="freeze"/>
-    <animate attributeName="x" begin="z.begin+12.44s" dur="1.01s" values="56;104" fill="freeze"/>
+    <animate attributeName="x" begin="z.begin+19.95s" dur="2.36s" values="104;56" fill="freeze"/>
+    <animate attributeName="x" begin="z.begin+23.91s" dur="1.60s" values="56;104" fill="freeze"/>
+    <animate attributeName="x" begin="z.begin+34.06s" dur="2.45s" values="104;56" fill="freeze"/>
+    <animate attributeName="x" begin="z.begin+38.11s" dur="1.61s" values="56;104" fill="freeze"/>
   </rect>
   <rect x="152" y="124" width="48" height="72" style="fill: #ccc; fill-opacity: 0.8; stroke: black">
     <set attributeName="x" to="152" begin="z.begin" />
-    <animate attributeName="x" begin="z.begin+10.42s" dur="1.01s" values="152;200" fill="freeze"/>
-    <animate attributeName="x" begin="z.begin+12.44s" dur="1.01s" values="200;152" fill="freeze"/>
+    <animate attributeName="x" begin="z.begin+19.95s" dur="2.36s" values="152;200" fill="freeze"/>
+    <animate attributeName="x" begin="z.begin+23.91s" dur="1.60s" values="200;152" fill="freeze"/>
+    <animate attributeName="x" begin="z.begin+34.06s" dur="2.45s" values="152;200" fill="freeze"/>
+    <animate attributeName="x" begin="z.begin+38.11s" dur="1.61s" values="200;152" fill="freeze"/>
   </rect>
   <rect x="104" y="12" width="48" height="72" style="fill: #ccc; fill-opacity: 0.8; stroke: black">
     <set attributeName="x" to="104" begin="z.begin" />
-    <animate attributeName="x" begin="z.begin+6.95s" dur="0.44s" values="104;56" fill="freeze"/>
-    <animate attributeName="x" begin="z.begin+8.40s" dur="1.02s" values="56;104" fill="freeze"/>
+    <animate attributeName="x" begin="z.begin+5.88s" dur="2.33s" values="104;56" fill="freeze"/>
+    <animate attributeName="x" begin="z.begin+9.81s" dur="1.60s" values="56;104" fill="freeze"/>
+    <animate attributeName="x" begin="z.begin+27.02s" dur="2.33s" values="104;56" fill="freeze"/>
+    <animate attributeName="x" begin="z.begin+30.95s" dur="1.60s" values="56;104" fill="freeze"/>
   </rect>
   <rect x="152" y="12" width="48" height="72" style="fill: #ccc; fill-opacity: 0.8; stroke: black">
     <set attributeName="x" to="152" begin="z.begin" />
-    <animate attributeName="x" begin="z.begin+6.95s" dur="0.44s" values="152;200" fill="freeze"/>
-    <animate attributeName="x" begin="z.begin+8.40s" dur="1.02s" values="200;152" fill="freeze"/>
+    <animate attributeName="x" begin="z.begin+5.88s" dur="2.33s" values="152;200" fill="freeze"/>
+    <animate attributeName="x" begin="z.begin+9.81s" dur="1.60s" values="200;152" fill="freeze"/>
+    <animate attributeName="x" begin="z.begin+27.02s" dur="2.33s" values="152;200" fill="freeze"/>
+    <animate attributeName="x" begin="z.begin+30.95s" dur="1.60s" values="200;152" fill="freeze"/>
   </rect>
   <rect x="248" y="460" width="48" height="72" style="fill: #ccc; fill-opacity: 0.8; stroke: black">
     <set attributeName="x" to="248" begin="z.begin" />
+    <animate attributeName="x" begin="z.begin+11.48s" dur="1.91s" values="248;200" fill="freeze"/>
+    <animate attributeName="x" begin="z.begin+15.28s" dur="1.60s" values="200;248" fill="freeze"/>
   </rect>
   <rect x="296" y="460" width="48" height="72" style="fill: #ccc; fill-opacity: 0.8; stroke: black">
     <set attributeName="x" to="296" begin="z.begin" />
+    <animate attributeName="x" begin="z.begin+11.48s" dur="1.91s" values="296;344" fill="freeze"/>
+    <animate attributeName="x" begin="z.begin+15.28s" dur="1.60s" values="344;296" fill="freeze"/>
   </rect>
   <rect x="248" y="348" width="48" height="72" style="fill: #ccc; fill-opacity: 0.8; stroke: black">
     <set attributeName="x" to="248" begin="z.begin" />
-    <animate attributeName="x" begin="z.begin+3.13s" dur="0.46s" values="248;200" fill="freeze"/>
-    <animate attributeName="x" begin="z.begin+4.60s" dur="1.01s" values="200;248" fill="freeze"/>
   </rect>
   <rect x="296" y="348" width="48" height="72" style="fill: #ccc; fill-opacity: 0.8; stroke: black">
     <set attributeName="x" to="296" begin="z.begin" />
-    <animate attributeName="x" begin="z.begin+3.13s" dur="0.46s" values="296;344" fill="freeze"/>
-    <animate attributeName="x" begin="z.begin+4.60s" dur="1.01s" values="344;296" fill="freeze"/>
   </rect>
   <rect x="248" y="236" width="48" height="72" style="fill: #ccc; fill-opacity: 0.8; stroke: black">
     <set attributeName="x" to="248" begin="z.begin" />
+    <animate attributeName="x" begin="z.begin+4.74s" dur="2.03s" values="248;200" fill="freeze"/>
+    <animate attributeName="x" begin="z.begin+8.37s" dur="1.61s" values="200;248" fill="freeze"/>
+    <animate attributeName="x" begin="z.begin+18.38s" dur="2.48s" values="248;200" fill="freeze"/>
+    <animate attributeName="x" begin="z.begin+22.47s" dur="1.61s" values="200;248" fill="freeze"/>
+    <animate attributeName="x" begin="z.begin+32.54s" dur="1.60s" values="248;200" fill="freeze"/>
+    <animate attributeName="x" begin="z.begin+35.75s" dur="1.60s" values="200;248" fill="freeze"/>
   </rect>
   <rect x="296" y="236" width="48" height="72" style="fill: #ccc; fill-opacity: 0.8; stroke: black">
     <set attributeName="x" to="296" begin="z.begin" />
+    <animate attributeName="x" begin="z.begin+4.74s" dur="2.03s" values="296;344" fill="freeze"/>
+    <animate attributeName="x" begin="z.begin+8.37s" dur="1.61s" values="344;296" fill="freeze"/>
+    <animate attributeName="x" begin="z.begin+18.38s" dur="2.48s" values="296;344" fill="freeze"/>
+    <animate attributeName="x" begin="z.begin+22.47s" dur="1.61s" values="344;296" fill="freeze"/>
+    <animate attributeName="x" begin="z.begin+32.54s" dur="1.60s" values="296;344" fill="freeze"/>
+    <animate attributeName="x" begin="z.begin+35.75s" dur="1.60s" values="344;296" fill="freeze"/>
   </rect>
   <rect x="248" y="124" width="48" height="72" style="fill: #ccc; fill-opacity: 0.8; stroke: black">
     <set attributeName="x" to="248" begin="z.begin" />
+    <animate attributeName="x" begin="z.begin+25.58s" dur="2.25s" values="248;200" fill="freeze"/>
+    <animate attributeName="x" begin="z.begin+29.43s" dur="1.60s" values="200;248" fill="freeze"/>
   </rect>
   <rect x="296" y="124" width="48" height="72" style="fill: #ccc; fill-opacity: 0.8; stroke: black">
     <set attributeName="x" to="296" begin="z.begin" />
+    <animate attributeName="x" begin="z.begin+25.58s" dur="2.25s" values="296;344" fill="freeze"/>
+    <animate attributeName="x" begin="z.begin+29.43s" dur="1.60s" values="344;296" fill="freeze"/>
   </rect>
   <rect x="248" y="12" width="48" height="72" style="fill: #ccc; fill-opacity: 0.8; stroke: black">
     <set attributeName="x" to="248" begin="z.begin" />
-    <animate attributeName="x" begin="z.begin+6.62s" dur="1.01s" values="248;200" fill="freeze"/>
-    <animate attributeName="x" begin="z.begin+8.64s" dur="1.01s" values="200;248" fill="freeze"/>
   </rect>
   <rect x="296" y="12" width="48" height="72" style="fill: #ccc; fill-opacity: 0.8; stroke: black">
     <set attributeName="x" to="296" begin="z.begin" />
-    <animate attributeName="x" begin="z.begin+6.62s" dur="1.01s" values="296;344" fill="freeze"/>
-    <animate attributeName="x" begin="z.begin+8.64s" dur="1.01s" values="344;296" fill="freeze"/>
   </rect>
-<path d="M0 0 L448 0 L448 96 L0 96 L0 0 M104 12 L104 84 L200 84 L200 12 L104 12 M248 12 L248 84 L344 84 L344 12 L248 12 M0 112 L448 112 L448 208 L0 208 L0 112 M104 124 L104 196 L200 196 L200 124 L104 124 M248 124 L248 196 L344 196 L344 124 L248 124 M0 224 L448 224 L448 320 L0 320 L0 224 M104 236 L104 308 L200 308 L200 236 L104 236 M248 236 L248 308 L344 308 L344 236 L248 236 M0 336 L448 336 L448 432 L0 432 L0 336 M104 348 L104 420 L200 420 L200 348 L104 348 M248 348 L248 420 L344 420 L344 348 L248 348 M0 448 L448 448 L448 544 L0 544 L0 448 M104 460 L104 532 L200 532 L200 460 L104 460 M248 460 L248 532 L344 532 L344 460 L248 460 " style="stroke: black; fill: #ddd; fill-opacity: 0.8" />
+  <rect x="392" y="460" width="48" height="72" style="fill: #ccc; fill-opacity: 0.8; stroke: black">
+    <set attributeName="x" to="392" begin="z.begin" />
+    <animate attributeName="x" begin="z.begin+18.55s" dur="1.85s" values="392;344" fill="freeze"/>
+    <animate attributeName="x" begin="z.begin+22.00s" dur="1.61s" values="344;392" fill="freeze"/>
+  </rect>
+  <rect x="440" y="460" width="48" height="72" style="fill: #ccc; fill-opacity: 0.8; stroke: black">
+    <set attributeName="x" to="440" begin="z.begin" />
+    <animate attributeName="x" begin="z.begin+18.55s" dur="1.85s" values="440;488" fill="freeze"/>
+    <animate attributeName="x" begin="z.begin+22.00s" dur="1.61s" values="488;440" fill="freeze"/>
+  </rect>
+  <rect x="392" y="348" width="48" height="72" style="fill: #ccc; fill-opacity: 0.8; stroke: black">
+    <set attributeName="x" to="392" begin="z.begin" />
+    <animate attributeName="x" begin="z.begin+25.11s" dur="1.82s" values="392;344" fill="freeze"/>
+    <animate attributeName="x" begin="z.begin+28.53s" dur="1.60s" values="344;392" fill="freeze"/>
+    <animate attributeName="x" begin="z.begin+38.16s" dur="1.60s" values="392;344" fill="freeze"/>
+    <animate attributeName="x" begin="z.begin+41.37s" dur="1.60s" values="344;392" fill="freeze"/>
+  </rect>
+  <rect x="440" y="348" width="48" height="72" style="fill: #ccc; fill-opacity: 0.8; stroke: black">
+    <set attributeName="x" to="440" begin="z.begin" />
+    <animate attributeName="x" begin="z.begin+25.11s" dur="1.82s" values="440;488" fill="freeze"/>
+    <animate attributeName="x" begin="z.begin+28.53s" dur="1.60s" values="488;440" fill="freeze"/>
+    <animate attributeName="x" begin="z.begin+38.16s" dur="1.60s" values="440;488" fill="freeze"/>
+    <animate attributeName="x" begin="z.begin+41.37s" dur="1.60s" values="488;440" fill="freeze"/>
+  </rect>
+  <rect x="392" y="236" width="48" height="72" style="fill: #ccc; fill-opacity: 0.8; stroke: black">
+    <set attributeName="x" to="392" begin="z.begin" />
+    <animate attributeName="x" begin="z.begin+5.27s" dur="1.96s" values="392;344" fill="freeze"/>
+    <animate attributeName="x" begin="z.begin+8.83s" dur="1.60s" values="344;392" fill="freeze"/>
+    <animate attributeName="x" begin="z.begin+31.64s" dur="1.81s" values="392;344" fill="freeze"/>
+    <animate attributeName="x" begin="z.begin+35.05s" dur="1.60s" values="344;392" fill="freeze"/>
+  </rect>
+  <rect x="440" y="236" width="48" height="72" style="fill: #ccc; fill-opacity: 0.8; stroke: black">
+    <set attributeName="x" to="440" begin="z.begin" />
+    <animate attributeName="x" begin="z.begin+5.27s" dur="1.96s" values="440;488" fill="freeze"/>
+    <animate attributeName="x" begin="z.begin+8.83s" dur="1.60s" values="488;440" fill="freeze"/>
+    <animate attributeName="x" begin="z.begin+31.64s" dur="1.81s" values="440;488" fill="freeze"/>
+    <animate attributeName="x" begin="z.begin+35.05s" dur="1.60s" values="488;440" fill="freeze"/>
+  </rect>
+  <rect x="392" y="124" width="48" height="72" style="fill: #ccc; fill-opacity: 0.8; stroke: black">
+    <set attributeName="x" to="392" begin="z.begin" />
+    <animate attributeName="x" begin="z.begin+11.94s" dur="1.89s" values="392;344" fill="freeze"/>
+    <animate attributeName="x" begin="z.begin+15.44s" dur="1.61s" values="344;392" fill="freeze"/>
+  </rect>
+  <rect x="440" y="124" width="48" height="72" style="fill: #ccc; fill-opacity: 0.8; stroke: black">
+    <set attributeName="x" to="440" begin="z.begin" />
+    <animate attributeName="x" begin="z.begin+11.94s" dur="1.89s" values="440;488" fill="freeze"/>
+    <animate attributeName="x" begin="z.begin+15.44s" dur="1.61s" values="488;440" fill="freeze"/>
+  </rect>
+  <rect x="392" y="12" width="48" height="72" style="fill: #ccc; fill-opacity: 0.8; stroke: black">
+    <set attributeName="x" to="392" begin="z.begin" />
+  </rect>
+  <rect x="440" y="12" width="48" height="72" style="fill: #ccc; fill-opacity: 0.8; stroke: black">
+    <set attributeName="x" to="440" begin="z.begin" />
+  </rect>
+<path d="M0 0 L592 0 L592 96 L0 96 L0 0 M104 12 L104 84 L200 84 L200 12 L104 12 M248 12 L248 84 L344 84 L344 12 L248 12 M392 12 L392 84 L488 84 L488 12 L392 12 M0 112 L592 112 L592 208 L0 208 L0 112 M104 124 L104 196 L200 196 L200 124 L104 124 M248 124 L248 196 L344 196 L344 124 L248 124 M392 124 L392 196 L488 196 L488 124 L392 124 M0 224 L592 224 L592 320 L0 320 L0 224 M104 236 L104 308 L200 308 L200 236 L104 236 M248 236 L248 308 L344 308 L344 236 L248 236 M392 236 L392 308 L488 308 L488 236 L392 236 M0 336 L592 336 L592 432 L0 432 L0 336 M104 348 L104 420 L200 420 L200 348 L104 348 M248 348 L248 420 L344 420 L344 348 L248 348 M392 348 L392 420 L488 420 L488 348 L392 348 M0 448 L592 448 L592 544 L0 544 L0 448 M104 460 L104 532 L200 532 L200 460 L104 460 M248 460 L248 532 L344 532 L344 460 L248 460 M392 460 L392 532 L488 532 L488 460 L392 460 " style="stroke: black; fill: #ddd; fill-opacity: 0.8" />
 <text x="52" y="24" style="font-size: 24px; font-weight: bold; font-family: sans-serif; text-anchor: middle">Floor 5</text>
 <rect x="48" y="48" width="8" height="16" style="fill: none; stroke: black;" />
-<rect x="392" y="48" width="8" height="16" style="fill: none; stroke: black;" />
-<rect x="0" y="96" width="448" height="16" style="fill: #aaa; fill-opacity: 0.9;" />
+<rect x="536" y="48" width="8" height="16" style="fill: none; stroke: black;" />
+<rect x="0" y="96" width="592" height="16" style="fill: #aaa; fill-opacity: 0.9;" />
 <text x="52" y="136" style="font-size: 24px; font-weight: bold; font-family: sans-serif; text-anchor: middle">Floor 4</text>
 <rect x="48" y="160" width="8" height="16" style="fill: none; stroke: black;" />
-<rect x="392" y="160" width="8" height="16" style="fill: none; stroke: black;" />
-<rect x="0" y="208" width="448" height="16" style="fill: #aaa; fill-opacity: 0.9;" />
+<rect x="536" y="160" width="8" height="16" style="fill: none; stroke: black;" />
+<rect x="0" y="208" width="592" height="16" style="fill: #aaa; fill-opacity: 0.9;" />
 <text x="52" y="248" style="font-size: 24px; font-weight: bold; font-family: sans-serif; text-anchor: middle">Floor 3</text>
 <rect x="48" y="272" width="8" height="16" style="fill: none; stroke: black;" />
-<rect x="392" y="272" width="8" height="16" style="fill: none; stroke: black;" />
-<rect x="0" y="320" width="448" height="16" style="fill: #aaa; fill-opacity: 0.9;" />
+<rect x="536" y="272" width="8" height="16" style="fill: none; stroke: black;" />
+<rect x="0" y="320" width="592" height="16" style="fill: #aaa; fill-opacity: 0.9;" />
 <text x="52" y="360" style="font-size: 24px; font-weight: bold; font-family: sans-serif; text-anchor: middle">Floor 2</text>
 <rect x="48" y="384" width="8" height="16" style="fill: none; stroke: black;" />
-<rect x="392" y="384" width="8" height="16" style="fill: none; stroke: black;" />
-<rect x="0" y="432" width="448" height="16" style="fill: #aaa; fill-opacity: 0.9;" />
+<rect x="536" y="384" width="8" height="16" style="fill: none; stroke: black;" />
+<rect x="0" y="432" width="592" height="16" style="fill: #aaa; fill-opacity: 0.9;" />
 <text x="52" y="472" style="font-size: 24px; font-weight: bold; font-family: sans-serif; text-anchor: middle">Floor 1</text>
 <rect x="48" y="496" width="8" height="16" style="fill: none; stroke: black;" />
-<rect x="392" y="496" width="8" height="16" style="fill: none; stroke: black;" />
-<use href="#p" fill="#02c">
+<rect x="536" y="496" width="8" height="16" style="fill: none; stroke: black;" />
+<use href="#p" fill="#093">
   <set attributeName="y" to="36" begin="z.begin" />
-  <animate attributeName="x" values="-554;40" begin="z.begin" dur="5.95s" fill="freeze" />
-  <animate attributeName="x" values="40;147" begin="z.begin+6.20s" dur="1.07s" fill="freeze" />
-  <animate attributeName="opacity" values="1;0" begin="z.begin+7.39s" dur="0.50s" fill="freeze" />
-  <set attributeName="y" to="148" begin="z.begin+11.43s" />
-  <animate attributeName="opacity" values="0;1" begin="z.begin+11.43s" dur="0.50s" fill="freeze" />
-  <animate attributeName="x" values="147;-24" begin="z.begin+11.93s" dur="1.71s" fill="freeze" />
+  <animate attributeName="x" values="-392;40" begin="z.begin" dur="4.33s" fill="freeze" />
+  <animate attributeName="x" values="40;147" begin="z.begin+4.70s" dur="1.07s" fill="freeze" />
+  <animate attributeName="opacity" values="1;0" begin="z.begin+8.21s" dur="0.50s" fill="freeze" />
+  <set attributeName="y" to="484" begin="z.begin+15.24s" />
+  <animate attributeName="opacity" values="0;1" begin="z.begin+15.24s" dur="0.50s" fill="freeze" />
+  <animate attributeName="x" values="147;-24" begin="z.begin+15.74s" dur="1.71s" fill="freeze" />
 </use>
-<use href="#p" fill="#c80">
-  <set attributeName="y" to="372" begin="z.begin" />
-  <animate attributeName="x" values="596;384" begin="z.begin" dur="2.12s" fill="freeze" />
-  <animate attributeName="x" values="384;272" begin="z.begin+2.37s" dur="1.12s" fill="freeze" />
-  <animate attributeName="opacity" values="1;0" begin="z.begin+3.59s" dur="0.50s" fill="freeze" />
-  <set attributeName="y" to="36" begin="z.begin+7.63s" />
-  <animate attributeName="opacity" values="0;1" begin="z.begin+7.63s" dur="0.50s" fill="freeze" />
-  <animate attributeName="x" values="272;-24" begin="z.begin+8.13s" dur="2.96s" fill="freeze" />
+<use href="#p" fill="#750">
+  <set attributeName="y" to="148" begin="z.begin" />
+  <animate attributeName="x" values="1471;528" begin="z.begin" dur="9.43s" fill="freeze" />
+  <animate attributeName="x" values="528;128" begin="z.begin+9.81s" dur="4.00s" fill="freeze" />
+  <animate attributeName="opacity" values="1;0" begin="z.begin+22.31s" dur="0.50s" fill="freeze" />
+  <set attributeName="y" to="36" begin="z.begin+29.35s" />
+  <animate attributeName="opacity" values="0;1" begin="z.begin+29.35s" dur="0.50s" fill="freeze" />
+  <animate attributeName="x" values="128;-24" begin="z.begin+29.85s" dur="1.52s" fill="freeze" />
 </use>
-<path d="M0 568 L448 568 M0 560 L0 576 M448 560 L448 576" style="stroke: black;" />
+<use href="#p" fill="#04b">
+  <set attributeName="y" to="484" begin="z.begin" />
+  <animate attributeName="x" values="-525;40" begin="z.begin" dur="5.65s" fill="freeze" />
+  <animate attributeName="x" values="40;301" begin="z.begin+6.03s" dur="2.61s" fill="freeze" />
+  <animate attributeName="opacity" values="1;0" begin="z.begin+13.39s" dur="0.50s" fill="freeze" />
+  <set attributeName="y" to="260" begin="z.begin+20.87s" />
+  <animate attributeName="opacity" values="0;1" begin="z.begin+20.87s" dur="0.50s" fill="freeze" />
+  <animate attributeName="x" values="301;592" begin="z.begin+21.37s" dur="2.91s" fill="freeze" />
+</use>
+<use href="#p" fill="#0ca">
+  <set attributeName="y" to="484" begin="z.begin" />
+  <animate attributeName="x" values="1104;528" begin="z.begin" dur="5.77s" fill="freeze" />
+  <animate attributeName="x" values="528;426" begin="z.begin+6.14s" dur="1.02s" fill="freeze" />
+  <animate attributeName="opacity" values="1;0" begin="z.begin+20.39s" dur="0.50s" fill="freeze" />
+  <set attributeName="y" to="372" begin="z.begin+26.93s" />
+  <animate attributeName="opacity" values="0;1" begin="z.begin+26.93s" dur="0.50s" fill="freeze" />
+  <animate attributeName="x" values="426;592" begin="z.begin+27.43s" dur="1.66s" fill="freeze" />
+</use>
+<use href="#p" fill="#0d0">
+  <set attributeName="y" to="148" begin="z.begin" />
+  <animate attributeName="x" values="-602;40" begin="z.begin" dur="6.42s" fill="freeze" />
+  <animate attributeName="x" values="40;119" begin="z.begin+6.80s" dur="0.79s" fill="freeze" />
+  <animate attributeName="opacity" values="1;0" begin="z.begin+22.31s" dur="0.50s" fill="freeze" />
+  <set attributeName="y" to="36" begin="z.begin+29.35s" />
+  <animate attributeName="opacity" values="0;1" begin="z.begin+29.35s" dur="0.50s" fill="freeze" />
+  <animate attributeName="x" values="119;-24" begin="z.begin+29.85s" dur="1.43s" fill="freeze" />
+</use>
+<use href="#p" fill="#307">
+  <set attributeName="y" to="148" begin="z.begin" />
+  <animate attributeName="x" values="1201;528" begin="z.begin" dur="6.73s" fill="freeze" />
+  <animate attributeName="x" values="528;292" begin="z.begin+7.11s" dur="2.36s" fill="freeze" />
+  <animate attributeName="opacity" values="1;0" begin="z.begin+27.83s" dur="0.50s" fill="freeze" />
+  <set attributeName="y" to="260" begin="z.begin+34.14s" />
+  <animate attributeName="opacity" values="0;1" begin="z.begin+34.14s" dur="0.50s" fill="freeze" />
+  <animate attributeName="x" values="292;-24" begin="z.begin+34.64s" dur="3.16s" fill="freeze" />
+</use>
+<use href="#p" fill="#208">
+  <set attributeName="y" to="260" begin="z.begin" />
+  <animate attributeName="x" values="-787;40" begin="z.begin" dur="8.27s" fill="freeze" />
+  <animate attributeName="x" values="40;417" begin="z.begin+8.65s" dur="3.77s" fill="freeze" />
+  <animate attributeName="opacity" values="1;0" begin="z.begin+33.45s" dur="0.50s" fill="freeze" />
+  <set attributeName="y" to="372" begin="z.begin+39.76s" />
+  <animate attributeName="opacity" values="0;1" begin="z.begin+39.76s" dur="0.50s" fill="freeze" />
+  <animate attributeName="x" values="417;592" begin="z.begin+40.26s" dur="1.75s" fill="freeze" />
+</use>
+<use href="#p" fill="#0b0">
+  <set attributeName="y" to="260" begin="z.begin" />
+  <animate attributeName="x" values="850;528" begin="z.begin" dur="3.22s" fill="freeze" />
+  <animate attributeName="x" values="528;302" begin="z.begin+3.60s" dur="2.26s" fill="freeze" />
+  <animate attributeName="opacity" values="1;0" begin="z.begin+6.77s" dur="0.50s" fill="freeze" />
+  <set attributeName="y" to="484" begin="z.begin+13.39s" />
+  <animate attributeName="opacity" values="0;1" begin="z.begin+13.39s" dur="0.50s" fill="freeze" />
+  <animate attributeName="x" values="302;592" begin="z.begin+13.89s" dur="2.90s" fill="freeze" />
+</use>
+<use href="#p" fill="#580">
+  <set attributeName="y" to="260" begin="z.begin" />
+  <animate attributeName="x" values="-333;40" begin="z.begin" dur="3.74s" fill="freeze" />
+  <animate attributeName="x" values="40;427" begin="z.begin+4.11s" dur="3.12s" fill="freeze" />
+  <animate attributeName="opacity" values="1;0" begin="z.begin+7.23s" dur="0.50s" fill="freeze" />
+  <set attributeName="y" to="148" begin="z.begin+13.83s" />
+  <animate attributeName="opacity" values="0;1" begin="z.begin+13.83s" dur="0.50s" fill="freeze" />
+  <animate attributeName="x" values="427;-24" begin="z.begin+14.33s" dur="4.51s" fill="freeze" />
+</use>
+<path d="M0 568 L592 568 M0 560 L0 576 M592 560 L592 576" style="stroke: black;" />
 <rect width="32" height="16" x="0" y="560">
-  <animate id="z" attributeName="x" begin="0s;z.end" dur="13.46s" from="0" to="416" /></rect>
+  <animate id="z" attributeName="x" begin="0s;z.end" dur="42.97s" from="0" to="560" /></rect>
 </svg>
