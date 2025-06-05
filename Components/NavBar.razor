@@ -5,60 +5,61 @@
     <a href="#" class="flex items-center space-x-3">
       <img src="img/name.svg" class="h-24" alt="Jarred Jenkins" />
     </a>
-    
+
     <div class="hidden w-full md:block md:w-auto">
-      <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 md:space-x-8 md:flex-row md:mt-0 md:border-0 md:bg-transparent items-center">
+      <ul
+        class="flex flex-col font-medium p-4 md:p-0 mt-4 md:space-x-8 md:flex-row md:mt-0 md:border-0 md:bg-transparent items-center">
         <li>
           <a href="#" class="block py-2 px-3 text-white md:p-0 hover:text-red-400 cursor-pointer">Home</a>
         </li>
         <li class="relative">
-          <button @onclick="ToggleContactForm" 
-                  id="contact-button"
-                  class="block py-2 px-3 text-white hover:text-red-400 md:p-0 transition-colors cursor-pointer">
+          <button @onclick="ToggleContactForm" id="contact-button"
+            class="block py-2 px-3 text-white hover:text-red-400 md:p-0 transition-colors cursor-pointer">
             Contact
           </button>
-          
+
           <!-- Contact Form Popup -->
-          <div id="contact-modal" 
-               class="@(showContactForm ? "block" : "hidden") absolute right-0 top-full mt-2 w-80 bg-white/10 backdrop-blur-md rounded-lg shadow-xl border border-white/20 z-50"
-               @onclick:stopPropagation="true">
+          <div id="contact-modal"
+            class="@(showContactForm ? "block" : "hidden") absolute right-0 top-full mt-2 w-80 bg-white/10 backdrop-blur-md rounded-lg shadow-xl border border-white/20 z-50"
+            @onclick:stopPropagation="true">
             <div class="p-6">
               <div class="flex justify-between items-center mb-4">
                 <h3 class="text-lg font-semibold text-white">Get In Touch</h3>
                 <button @onclick="CloseContactForm" class="text-white/70 hover:text-white cursor-pointer">
                   <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                    <path fill-rule="evenodd"
+                      d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                      clip-rule="evenodd"></path>
                   </svg>
                 </button>
               </div>
-              
+
               <EditForm Model="contactForm" OnValidSubmit="SubmitContactForm">
                 <div class="mb-4">
                   <label class="block text-sm font-medium text-white mb-2">Name</label>
-                  <InputText @bind-Value="contactForm.Name" 
-                           class="w-full px-3 py-2 bg-white/10 border border-white/30 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 text-white placeholder-white/60" 
-                           placeholder="Your name" />
+                  <InputText @bind-Value="contactForm.Name"
+                    class="w-full px-3 py-2 bg-white/10 border border-white/30 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 text-white placeholder-white/60"
+                    placeholder="Your name" />
                 </div>
-                
+
                 <div class="mb-4">
                   <label class="block text-sm font-medium text-white mb-2">Email</label>
-                  <InputText @bind-Value="contactForm.Email" 
-                           type="email"
-                           class="w-full px-3 py-2 bg-white/10 border border-white/30 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 text-white placeholder-white/60" 
-                           placeholder="your@email.com" />
+                  <InputText @bind-Value="contactForm.Email" type="email"
+                    class="w-full px-3 py-2 bg-white/10 border border-white/30 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 text-white placeholder-white/60"
+                    placeholder="your@email.com" />
                 </div>
-                
+
                 <div class="mb-4">
                   <label class="block text-sm font-medium text-white mb-2">Message</label>
-                  <InputTextArea @bind-Value="contactForm.Message" 
-                               class="w-full px-3 py-2 bg-white/10 border border-white/30 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 h-24 resize-none text-white placeholder-white/60" 
-                               placeholder="Your message..." />
+                  <InputTextArea @bind-Value="contactForm.Message"
+                    class="w-full px-3 py-2 bg-white/10 border border-white/30 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 h-24 resize-none text-white placeholder-white/60"
+                    placeholder="Your message..." />
                 </div>
-                
+
                 <div class="flex gap-3">
-                  <button type="submit" 
-                          class="flex-1 bg-blue-600/80 backdrop-blur-sm text-white py-2 px-4 rounded-md hover:bg-blue-700/80 transition-colors cursor-pointer"
-                          disabled="@isSubmitting">
+                  <button type="submit"
+                    class="flex-1 bg-blue-600/80 backdrop-blur-sm text-white py-2 px-4 rounded-md hover:bg-blue-700/80 transition-colors cursor-pointer"
+                    disabled="@isSubmitting">
                     @if (isSubmitting)
                     {
                       <span>Sending...</span>
@@ -69,15 +70,16 @@
                     }
                   </button>
                   <button type="button" @onclick="CloseContactForm"
-                          class="px-4 py-2 border border-white/30 rounded-md text-white hover:bg-white/10 transition-colors cursor-pointer">
+                    class="px-4 py-2 border border-white/30 rounded-md text-white hover:bg-white/10 transition-colors cursor-pointer">
                     Cancel
                   </button>
                 </div>
               </EditForm>
-              
+
               @if (!string.IsNullOrEmpty(statusMessage))
               {
-                <div class="mt-3 p-3 rounded-md @(isSuccess ? "bg-green-500/20 text-green-200 border border-green-400/30" : "bg-red-500/20 text-red-200 border border-red-400/30")">
+                <div
+                  class="mt-3 p-3 rounded-md @(isSuccess ? "bg-green-500/20 text-green-200 border border-green-400/30" : "bg-red-500/20 text-red-200 border border-red-400/30")">
                   @statusMessage
                 </div>
               }
@@ -90,89 +92,89 @@
 </nav>
 
 @code {
-    private bool showContactForm = false;
-    private bool isSubmitting = false;
-    private bool isSuccess = false;
-    private string statusMessage = "";
-    private ContactFormModel contactForm = new();
+  private bool showContactForm = false;
+  private bool isSubmitting = false;
+  private bool isSuccess = false;
+  private string statusMessage = "";
+  private ContactFormModel contactForm = new();
 
-    protected override async Task OnAfterRenderAsync(bool firstRender)
+  protected override async Task OnAfterRenderAsync(bool firstRender)
+  {
+    if (firstRender)
     {
-        if (firstRender)
-        {
-            await JS.InvokeVoidAsync("setupContactFormClickOutside");
-        }
+      await JS.InvokeVoidAsync("setupContactFormClickOutside");
     }
+  }
 
-    private void ToggleContactForm()
+  private void ToggleContactForm()
+  {
+    showContactForm = !showContactForm;
+    if (showContactForm)
     {
-        showContactForm = !showContactForm;
-        if (showContactForm)
-        {
-            // Reset form when opening
-            contactForm = new ContactFormModel();
-            statusMessage = "";
-        }
+      // Reset form when opening
+      contactForm = new ContactFormModel();
+      statusMessage = "";
     }
+  }
 
-    private void CloseContactForm()
+  private void CloseContactForm()
+  {
+    showContactForm = false;
+  }
+
+  [JSInvokable]
+  public static async Task CloseContactFormFromJS()
+  {
+    // This method will be called from JavaScript
+    // We need to update the component state
+    await Task.CompletedTask;
+  }
+
+  private async Task SubmitContactForm()
+  {
+    isSubmitting = true;
+    statusMessage = "";
+
+    try
     {
-        showContactForm = false;
-    }
+      var requestData = new
+      {
+        name = contactForm.Name,
+        email = contactForm.Email,
+        message = contactForm.Message
+      };
 
-    [JSInvokable]
-    public static async Task CloseContactFormFromJS()
+      using var httpClient = new HttpClient();
+      // Use your proxy instead of Formspree directly
+      var response = await httpClient.PostAsJsonAsync("https://portfolio-proxyjs.vercel.app/api/contact", requestData);
+
+      if (response.IsSuccessStatusCode)
+      {
+        statusMessage = "Message sent successfully! I'll get back to you soon.";
+        isSuccess = true;
+        contactForm = new ContactFormModel(); // Reset form
+      }
+      else
+      {
+        statusMessage = "Failed to send message. Please try again.";
+        isSuccess = false;
+      }
+    }
+    catch (Exception ex)
     {
-        // This method will be called from JavaScript
-        // We need to update the component state
-        await Task.CompletedTask;
+      isSuccess = false;
+      Console.WriteLine($"Error: {ex.Message}"); // For debugging
     }
-
-    private async Task SubmitContactForm()
+    finally
     {
-        isSubmitting = true;
-        statusMessage = "";
-
-        try
-        {
-            // Formspree
-            var formData = new FormUrlEncodedContent(new[]
-            {
-                new KeyValuePair<string, string>("name", contactForm.Name ?? ""),
-                new KeyValuePair<string, string>("email", contactForm.Email ?? ""),
-                new KeyValuePair<string, string>("message", contactForm.Message ?? "")
-            });
-
-            using var httpClient = new HttpClient();
-            var response = await httpClient.PostAsync("https://formspree.io/f/mjkrkkyp", formData);
-
-            if (response.IsSuccessStatusCode)
-            {
-                statusMessage = "Message sent successfully! I'll get back to you soon.";
-                isSuccess = true;
-                contactForm = new ContactFormModel(); // Reset form
-            }
-            else
-            {
-                statusMessage = "Failed to send message. Please try again.";
-                isSuccess = false;
-            }
-        }
-        catch (Exception)
-        {
-            statusMessage = "An error occurred. Please try again later.";
-            isSuccess = false;
-        }
-        finally
-        {
-            isSubmitting = false;
-        }
+      isSubmitting = false;
     }
+  }
 
-    public class ContactFormModel
-    {
-        public string? Name { get; set; }
-        public string? Email { get; set; }
-        public string? Message { get; set; }
-    }
+  public class ContactFormModel
+  {
+    public string? Name { get; set; }
+    public string? Email { get; set; }
+    public string? Message { get; set; }
+  }
 }
