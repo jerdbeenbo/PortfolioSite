@@ -1,0 +1,24 @@
+{
+  "name": "rust-sand",
+  "type": "module",
+  "collaborators": [
+    "Jarred Jenkins <https://github.com/jerdbeenbo>"
+  ],
+  "description": "A falling sand particle SA simulation",
+  "version": "0.1.0",
+  "license": "MIT/Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jerdbeenbo/..."
+  },
+  "files": [
+    "rust_sand_bg.wasm",
+    "rust_sand.js",
+    "rust_sand.d.ts"
+  ],
+  "main": "rust_sand.js",
+  "types": "rust_sand.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}

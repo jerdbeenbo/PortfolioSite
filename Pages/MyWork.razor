@@ -9,73 +9,89 @@
 <BoidBg />
 <NavBar />
 
-@if (IsWeb)
+@if (IsWebAssembly)
 {
-    <div class="mt-4 relative min-h-screen flex items-center justify-center">
-        <div class="w-full max-w-7xl grid grid-cols-3 gap-8 px-4">
+   <div class="mt-4 relative min-h-screen flex items-center justify-center">
+       <div class="w-full max-w-7xl grid grid-cols-3 gap-8 px-4">
 
-            <!-- Elevator Animation - 1/3 -->
-            <div class="flex flex-col items-center h-full">
-                <h2 class="mt-3 text-xl font-bold text-white text-center">Elevator Animation</h2>
-                <div class="flex-1 flex items-center justify-center w-full">
-                    <img src="/anims/elevator.svg" alt="Elevator Animation" class="max-w-full max-h-96 object-contain" />
-                </div>
-                <p class="text-xs mt-1 text-center text-white leading-relaxed">
-                    A sophisticated multi-threaded elevator control system written in C. The architecture includes a central
-                    controller that manages multiple elevator cars through TCP communication, with each car running
-                    concurrent threads for state management, networking, and status updates. The system features shared
-                    memory IPC with mutex synchronisation, safety-critical monitoring with emergency handling, intelligent
-                    request scheduling algorithms, and robust error handling. It demonstrates advanced systems programming
-                    concepts including real-time operation, inter-process communication, and safety-critical software design
-                    principles. *displayed through svg Animation library written by unit coordinator
-                </p>
-            </div>
+           <!-- Elevator Animation - 1/3 -->
+           <div class="flex flex-col items-center h-full">
+               <h2 class="mt-3 text-xl font-bold text-white text-center">Elevator Animation</h2>
+               <div class="flex-1 flex items-center justify-center w-full">
+                   <img src="/anims/elevator.svg" alt="Elevator Animation" class="max-w-full max-h-96 object-contain" />
+               </div>
+               <p class="text-xs mt-1 text-center text-white leading-relaxed">
+                   A sophisticated multi-threaded elevator control system written in C. The architecture includes a central
+                   controller that manages multiple elevator cars through TCP communication, with each car running
+                   concurrent threads for state management, networking, and status updates. The system features shared
+                   memory IPC with mutex synchronisation, safety-critical monitoring with emergency handling, intelligent
+                   request scheduling algorithms, and robust error handling. It demonstrates advanced systems programming
+                   concepts including real-time operation, inter-process communication, and safety-critical software design
+                   principles. *displayed through svg Animation library written by unit coordinator
+               </p>
+           </div>
 
-            <!-- Game of Life - 1/3 -->
-            <div class="flex flex-col items-center h-full">
-                <h2 class="mt-3 text-xl font-bold text-white text-center">Game of Life</h2>
-                <div class="flex-1 flex items-center justify-center">
-                    <canvas @ref="gameOfLife" id="gameOfLife"
-                        class="rounded-lg border-2 border-red-900 backdrop-blur-xs backdrop-opacity-80"
-                        style="width: 300px; height: 500px;">
-                    </canvas>
-                </div>
-                <p class="text-sm text-center text-red-400">Click and drag to add particles</p>
-                <p class="text-xs mt-2 flex justify-center text-center text-white w-2xs">Rust Based Cellular Automata
-                    simulation, compiled to WebAssembly. JavaScript / HTML canvas</p>
-            </div>
+           <!-- Game of Life - 1/3 -->
+           <div class="flex flex-col items-center h-full">
+               <h2 class="mt-3 text-xl font-bold text-white text-center">Game of Life</h2>
+               <div class="flex-1 flex items-center justify-center">
+                   <canvas @ref="gameOfLife" id="gameOfLife"
+                       class="rounded-lg border-2 border-red-900 backdrop-blur-xs backdrop-opacity-80"
+                       style="width: 300px; height: 500px;">
+                   </canvas>
+               </div>
+               <p class="text-sm text-center text-red-400">Click and drag to add particles</p>
+               <p class="text-xs mt-2 flex justify-center text-center text-white w-2xs">Rust Based Cellular Automata
+                   simulation, compiled to WebAssembly. JavaScript / HTML canvas</p>
 
-            <!-- CPR CoPilot - 1/3 -->
-            <div class="flex flex-col items-center h-full">
-                <h2 class="mt-3 text-xl font-bold text-white text-center">CPR CoPilot</h2>
-                <div class="flex-1 flex items-center justify-center w-full">
-                    <img src="img/cpr_copilot.png" class="max-w-full max-h-full object-contain" /> 
-                </div>
-                <p class="text-sm mt-1 text-center text-white">Cross Platform Expo Application (React Native) that targeted IOS, Android and Web. Served as a foundation for the business and operated as a "marketing-funnel". Uni integrated learning.</p>
-            </div>
+           </div>
 
-        </div>
-    </div>
+           <!-- CPR CoPilot - 1/3 -->
+           <div class="flex flex-col items-center h-full">
+               <h2 class="mt-3 text-xl font-bold text-white text-center">CPR CoPilot</h2>
+               <div class="flex-1 flex items-center justify-center w-full">
+                   <img src="img/cpr_copilot.png" class="max-w-full max-h-full object-contain" /> 
+               </div>
+               <p class="text-sm mt-1 text-center text-white">Cross Platform Expo Application (React Native) that targeted IOS, Android and Web. Served as a foundation for the business and operated as a "marketing-funnel". Uni integrated learning.</p>
+           </div>
+
+       </div>
+   </div>
 }
 else
 {
-    <div class="relative min-h-screen flex items-center justify-center">
-        <div class="text-center">
-            <h1 class="text-4xl font-bold text-white mb-4">Boot on web to see my work</h1>
-        </div>
-    </div>
+   <div class="relative min-h-screen flex items-center justify-center">
+       <div class="text-center">
+           <h1 class="text-4xl font-bold text-white mb-4">Boot on web to see my work</h1>
+       </div>
+   </div>
 }
 
 @code {
-    private ElementReference gameOfLife;
+   private ElementReference gameOfLife;
+   private bool IsWebAssembly = false;
 
-    private bool IsWeb => JS is IJSInProcessRuntime;
-
-    protected override async Task OnAfterRenderAsync(bool firstRender)
-    {
-        if (firstRender && IsWeb)
-        {
-            await JS.InvokeVoidAsync("initgol", gameOfLife);
-        }
-    }
+   protected override async Task OnAfterRenderAsync(bool firstRender)
+   {
+       if (firstRender)
+       {
+           try
+           {
+               var userAgent = await JS.InvokeAsync<string>("eval", "navigator.userAgent");
+               // Check if it's running in a browser or mobile app
+               IsWebAssembly = !userAgent.Contains("Mobile") || userAgent.Contains("WebAssembly");
+               StateHasChanged();
+               
+               if (IsWebAssembly)
+               {
+                   await JS.InvokeVoidAsync("initgol", gameOfLife);
+               }
+           }
+           catch
+           {
+               IsWebAssembly = false;
+               StateHasChanged();
+           }
+       }
+   }
 }
