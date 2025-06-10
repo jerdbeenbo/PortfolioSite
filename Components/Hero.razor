@@ -1,5 +1,6 @@
 @inject IJSRuntime JS
 @inject NavigationManager Navigation
+@using System.Runtime.InteropServices
 
 <canvas @ref="boidsCanvas" class="fixed top-0 left-0 w-full h-full pointer-events-none"></canvas>
 
@@ -44,9 +45,11 @@
 
     private ElementReference work;
 
+    private bool IsWeb => JS is IJSInProcessRuntime;
+
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        if (firstRender)
+        if (firstRender && IsWeb)
         {
             await JS.InvokeVoidAsync("initBoids", boidsCanvas);
             await JS.InvokeVoidAsync("initSand", sandCanvas);
